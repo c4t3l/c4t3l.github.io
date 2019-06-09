@@ -59,13 +59,15 @@
   <div class="article_text">
     <h3>Simple Setup</h3>
 <p>This simple setup defines the initial POC for this work.  The following items must exist:</p>
-<p>1 - Default Qemu image
-2 - Socket networking for qemu configured
-3 - User mode (SLIRP) networking for qemu configured
-4 - Entropy device passthru active in qemu? (see virtio section of qemu manual)
-5 - Salt minion already installed in qemu image</p>
+<ol>
+<li>Default Qemu image</li>
+<li>Socket networking for qemu configured</li>
+<li>User mode (SLIRP) networking for qemu configured</li>
+<li>Entropy device passthru active in qemu? (see virtio section of qemu manual)</li>
+<li>Salt minion already installed in qemu image</li>
+</ol>
 <h3>Qemu commands</h3>
-<p>The following will be translated to python for use with pytest</p>
+<p>The following will be translated (eventually...) to python for use with pytest</p>
 <div class="highlight"><pre><span></span># Test system1 mcast socket
 qemu-system-x86_64 -daemonize \
 -display gtk \
