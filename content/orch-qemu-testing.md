@@ -9,15 +9,15 @@ summary: Testing Saltstack orchestration
 
 This simple setup defines the initial POC for this work.  The following items must exist:
 
-1 - Default Qemu image
-2 - Socket networking for qemu configured
-3 - User mode (SLIRP) networking for qemu configured
-4 - Entropy device passthru active in qemu? (see virtio section of qemu manual)
-5 - Salt minion already installed in qemu image
+1. Default Qemu image
+2. Socket networking for qemu configured
+3. User mode (SLIRP) networking for qemu configured
+4. Entropy device passthru active in qemu? (see virtio section of qemu manual)
+5. Salt minion already installed in qemu image
 
 ### Qemu commands 
 
-The following will be translated to python for use with pytest
+The following will be translated (eventually...) to python for use with pytest
 
 ```
 # Test system1 mcast socket
