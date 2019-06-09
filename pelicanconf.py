@@ -13,6 +13,9 @@ TIMEZONE = 'America/Chicago'
 
 DEFAULT_LANG = 'en'
 
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
