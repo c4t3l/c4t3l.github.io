@@ -18,10 +18,11 @@
   <link href="https://blog.robbyc.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="robbyc.io Atom" />
   <link href="https://blog.robbyc.io/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="robbyc.io RSS" />
 
+<meta name="keywords" content="">
 
   <title>
     robbyc.io
-&ndash; Authors  </title>
+&ndash; Fun With Ed(1)  </title>
 
 </head>
 
@@ -52,11 +53,83 @@
     </header>
 
 <article>
-  <div class="article_text">
-    <ul>
-      <li><a href="https://blog.robbyc.io/author/robert-callicotte.html">Robert Callicotte</a> (3)</li>
-    </ul>
+  <div class="article_title">
+    <h1><a href="https://blog.robbyc.io/fun-with-ed.html">Fun With Ed(1)</a></h1>
   </div>
+  <div class="article_text">
+    <p>The ed text editor was one of the first key elements of the Unix operating system.  It has been described as one of the most user-hostile text editors ever created.  It operates in two distinct modes: command and input.  Here are some fun examples you can use to impress onlookers at your next dinner party!</p>
+<h2>Open a file</h2>
+<div class="highlight"><pre><span></span>ed tennyson.txt
+226
+</pre></div>
+
+
+<h2>Print all lines</h2>
+<div class="highlight"><pre><span></span>,p
+Cannon to right of them,
+Cannon to left of them,
+Cannon in front of them
+Volley&#39;d and thunder&#39;d;
+Storm&#39;d at with shot and shell,
+Boldly they rode and well,
+Into the jaws of Death,
+Into the mouth of Hell
+Rode the six hundred.
+</pre></div>
+
+
+<h2>Print first line</h2>
+<div class="highlight"><pre><span></span>1p
+Cannon to right of them,
+</pre></div>
+
+
+<h2>Print last line</h2>
+<div class="highlight"><pre><span></span>$p
+Rode the six hundred.
+</pre></div>
+
+
+<h2>Edit last line</h2>
+<div class="highlight"><pre><span></span>$p
+Rode the six hundred.
+s/six/nine/p
+Rode the nine hundred.
+</pre></div>
+
+
+<h2>Escaping edit mode</h2>
+<p>To escape out of edit mode you simply need to have a single line with <code>.</code></p>
+<div class="highlight"><pre><span></span>Rode the nine hundred.
+.
+</pre></div>
+
+
+<h2>Append to a line</h2>
+<div class="highlight"><pre><span></span>$a
+Here is a new line
+</pre></div>
+
+
+<h2>Write buffer to file (save)</h2>
+<div class="highlight"><pre><span></span>w &lt;filename&gt;
+</pre></div>
+
+
+<h2>Quit Ed(1)</h2>
+<div class="highlight"><pre><span></span>q
+</pre></div>
+
+
+<p>As you can see there are lots of fun ways to edit a file with ed(1).  I just touched on the basics here.  There is an entire new world of editing possible when you include the use of regex.  Ed(1) is lightweight also!  Clocking in at about 117k, it's much smaller than vim or emacs.  For the scoop on all of its features see the man or info pages.</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Sat 15 June 2019</p>
+    <p>Category: <a href="https://blog.robbyc.io/category/linux.html">linux</a>
+    </p>
+  </div>
+
+
 </article>
 
 
